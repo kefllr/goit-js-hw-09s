@@ -6,8 +6,8 @@ const storageData = localStorage.getItem(`feedback-form-state`);
 if (storageData) {
     const {email, message} = JSON.parse(storageData);
 
-    form.querySelector(`.email-input`).value = email;
-    form.querySelector(`.message-input`).value = message;
+    form.querySelector(`.email-input`).value = email.trim();
+    form.querySelector(`.message-input`).value = message.trim();
 }
 
 function inputForm(event) {
